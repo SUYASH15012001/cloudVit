@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i,800,800i,900,900i" rel="stylesheet"> 
+        <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+        <title>Document</title>
+    </head>
+    <style>
+        .title{
+            color: #0b91a7;
+            font-weight: bold;
+        }
+        .tabs{
+            margin-top: 10vh;
+        }
+        .tabActive{
+            display: inline-flex;
+            width: 100%;
+            /* background-color: #c9ffff; */
+            padding: 12px 10px;
+            border-radius: 20px;
+        }
+        .activeIcon{
+            background-color: #0b91a7;
+            padding: 13px;
+            border-radius: 9px;
+            font-size: 26px;
+            color: whitesmoke;
+        }
+        .tabtext{
+            margin: auto;
+            margin-left: 10px;
+            font-size: larger;
+            color:#454343;
+            /* width: 80%;
+            text-align: center;
+            align-self: flex-end; */
+        }
+        .dropdown-menu{
+            /* position: relative; */
+            margin-left: 37%;
+            margin-top: 2%;
+        }
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+            background-color: #c9ffff;
+        }
+    </style>
+    <body style="overflow-x: hidden;">
+        <div class="container-fluid" style="height: 100%;text-align: center; width: 100%;padding: 0;">
+            <div class="row" style="padding: 0;">
+                <div class="col-12 col-md-3" style="margin-top: 2%;">
+                    <h4 class='title'>
+                        Clout Wallet
+                    </h4>
+                    <div class="nav flex-column nav-pills me-3 tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <div class="nav-link active tabActive"
+                            id="v-pills-home-tab" 
+                            data-bs-toggle="pill" 
+                            data-bs-target="#v-pills-home" 
+                            type="button" 
+                            role="tab"
+                            aria-controls="v-pills-home" 
+                            aria-selected="true"
+                            >
+                            <i class="fa fa-phone activeIcon"></i>            
+                            <p class="tabtext pl-2">
+                                <strong>Join call</strong>
+                            </p>
+                        </div>
+                        <br>
+                        <div class="tabActive nav-link" 
+                        id="v-pills-recent-calls-tab" data-bs-toggle="pill" data-bs-target="#v-pills-recent-calls" type="button" role="tab" aria-controls="v-pills-recent-calls" aria-selected="false"
+                        >
+                            <i class="fa fa-volume-control-phone activeIcon"></i>            
+                            <p class="tabtext pl-2">
+                                <strong>Recent call</strong>
+                            </p>
+                        </div>
+                        <br>
+                        <div 
+                            class="tabActive nav-link"
+                            id="v-pills-perks-tab" 
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills-perks" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="v-pills-perks" 
+                            aria-selected="false"
+                        >
+                            <i class="fa fa-paw activeIcon"></i>            
+                            <p class="tabtext pl-2">
+                                <strong>Perks</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9">
+                    <nav class="navbar bg-light " style="padding-right: 0;">
+                        <div class="container-fluid" style="display: inline">
+                            <div class="row">
+                                <div class="col-1">
+                                    <a class="navbar-brand" href="#">
+                                        <img src="./avtar.jpg" alt="" width="30" height="40" class="d-inline-block align-text-top">
+                                    </a>
+                                </div>
+                                <div class="col-5" style="text-align: initial;">
+                                    <h5>User name</h5>
+                                    <h6 class="text-secondary">Details</h6>
+                                </div>
+                                <div class="col-6">
+                                    <div class="dropdown" style="padding-top: 5px;">
+                                        <span class="btn d-inline btn-outline bg-white dropdown-toggle p-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="navbar-brand" href="#">
+                                                <img src="./avtar.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                                            </a>
+                                            <h5 class="d-inline">User name</h5>
+                                        </span>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Username</a></li>
+                                            <li><a class="dropdown-item" href="#">19/06/2021</a></li>
+                                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="container-fluid" style="background-color: #eeeeee;height: 90vh; padding: 0;">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <div class="p-5">
+                                    <div class="alert alert-info" role="alert">
+                                        Coming Soon
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-recent-calls" role="tabpanel" aria-labelledby="v-pills-recent-calls-tab">
+                                <div class="pt-5">
+                                    <h5>
+                                        Recent calls
+                                    </h5>
+                                    <div class="card mb-3 mt-3 pb-2 pl-2 pt-1 ml-auto mr-auto" style="width: 80%;">
+                                        <div class="row g-0">
+                                            <div class="col-md-2">
+                                                <img src="./sqAvtar.jpg" alt="..." style="height: 100%;border-left: 4px solid #0b91a7; padding-left: 5px;">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body p-0">
+                                                    <h5 class="card-title">@Jonathen</h5>
+                                                    <p class="card-text text-secondary">Charges: $1.20</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 mt-2">
+                                                <i class="fa fa-comment"></i>
+                                                <p class="text-secondary">Today</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3 mt-3 pb-2 pl-2 pt-1 ml-auto mr-auto" style="width: 80%;">
+                                        <div class="row g-0">
+                                            <div class="col-md-2">
+                                                <img src="./sqAvtar.jpg" alt="..." style="height: 100%;border-left: 4px solid #0b91a7; padding-left: 5px;">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body p-0">
+                                                    <h5 class="card-title">@ClarkKent</h5>
+                                                    <p class="card-text text-secondary">Charges: $.58</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 mt-2">
+                                                <i class="fa fa-comment"></i>
+                                                <p class="text-secondary">Yesterday</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3 mt-3 pb-2 pl-2 pt-1 ml-auto mr-auto" style="width: 80%;">
+                                        <div class="row g-0">
+                                            <div class="col-md-2">
+                                                <img src="./sqAvtar.jpg" alt="..." style="height: 100%;border-left: 4px solid #0b91a7; padding-left: 5px;">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body p-0">
+                                                    <h5 class="card-title">@BruceWayne</h5>
+                                                    <p class="card-text text-secondary">Charges: $10.90 </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 mt-2">
+                                                <i class="fa fa-comment"></i>
+                                                <p class="text-secondary">5 days ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-perks" role="tabpanel" aria-labelledby="v-pills-perks-tab">
+                                <ul class="list-group p-5">
+                                    <!-- <li class="list-group-item">A simple default list group item</li> -->
+                                    <h5>Perks</h5>
+                                    <li class="list-group-item list-group-item-primary mt-2 mb-2">Our coin holders get free calls</li>
+                                    <li class="list-group-item list-group-item-secondary mt-2 mb-2">Our coin holders get to match with their needs</li>
+                                    <li class="list-group-item list-group-item-success mt-2 mb-2">Our coin holders match with extra hot chicks</li>
+                                    <!-- <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                                    <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+                                    <li class="list-group-item list-group-item-info">A simple info list group item</li>
+                                    <li class="list-group-item list-group-item-light">A simple light list group item</li>
+                                    <li class="list-group-item list-group-item-dark">A simple dark list group item</li> -->
+                                </ul>
+                            </div>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+
+    </script>   
+</html>
